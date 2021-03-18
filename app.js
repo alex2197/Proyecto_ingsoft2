@@ -1,12 +1,30 @@
-const { Sequelize } = require('sequelize')
+//const { Sequelize } = require('sequelize')
 const express = require('express')
 const app = express()
 const port = 3000
 
-const sequelize = new Sequelize('sqlite::memory')
+//const sequelize = new Sequelize('sqlite::memory')
+
+const routerClientes = require('./routes/clientes')
+const routerCatalogoCitas = require('./routes/CatalogoCitas')
+
+app.set('view engine', 'ejs')
+
+app.get('/', (req, res) => {
+    res.render('index')
+})
+
+app.use('/clientes', routerClientes)
+app.use('/CatalogoCitas', routerCatalogoCitas)
 
 
-app.post("/crearCliente",(req, res) => {
+app.listen(port, () => {
+    console.log(`Example app at http://localhost:${port}`)
+})
+
+
+
+/*app.post("/crearCliente",(req, res) => {
     console.log("Received a POST HTTP method")
 })
 
@@ -24,7 +42,7 @@ app.get("/RevisarCita", (req, res) => {
 
 app.put('/ActualizarCliente/:userId', (req, res) => {
     return res.send(
-        `PUT HTTP Method on ActualizarCliente/`,
+        `PUT HTTP Method on ActualizarCliente/${req.params.userId}`,
     )
 })
 
@@ -52,10 +70,4 @@ app.delete("/BorrarComentario", (req, res) => {
 
 app.get("/VerComentario", (req, res) => {
     return res.send("Received a GET HTTP method")
-})
-
-
-
-app.listen(port, () => {
-    console.log(`Example app at http://localhost:${port}`)
-})
+})*/
