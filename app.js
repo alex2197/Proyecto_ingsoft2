@@ -7,11 +7,8 @@ const port = 3000
 
 const routerClientes = require('./routes/clientes')
 const routerCatalogoCitas = require('./routes/CatalogoCitas')
-<<<<<<< HEAD
-const routerContacto = require('./routes/contacto')
-=======
 const routerContacto = require('./routes/Contacto')
->>>>>>> master
+
 
 app.set('view engine', 'ejs')
 
@@ -21,11 +18,7 @@ app.get('/', (req, res) => {
 
 app.use('/clientes', routerClientes)
 app.use('/CatalogoCitas', routerCatalogoCitas)
-<<<<<<< HEAD
-app.use('/contacto', routerContacto)
-=======
 app.use('/Contacto', routerContacto)
->>>>>>> master
 
 
 app.listen(port, () => {
