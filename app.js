@@ -11,6 +11,7 @@ const routerContacto = require('./routes/Contacto')
 
 
 app.set('view engine', 'ejs')
+app.use("/views/styles", express.static(__dirname + "/views/styles"));
 
 app.get('/', (req, res) => {
     res.render('index')

@@ -4,7 +4,7 @@
 
 body {
     background: #181818;
-    color: #fff;
+    color: rgb(255, 255, 255);
     line-height: 1.6;
     font-family: 'Quicksand', sans-serif;
     padding: 0 1.5em;
@@ -41,6 +41,7 @@ ul {
 
 .contact-form {
     background: #222222;
+    color: #fff;
 }
 
 .contact-form form {
@@ -50,6 +51,7 @@ ul {
 
 .contact-form form label {
     display: block;
+    color: #fff;
 }
 
 .contact-form form p {
@@ -91,6 +93,7 @@ ul {
 /* CONTACT INFO */
 .contact-info {
     background: #000;
+    color: #fff;
 }
 
 .contact-info h4, .contact-info ul, .contact-info p {
