@@ -10,4 +10,4 @@ router.get('/citasDelCliente', (req, res) => {
 })
 
 
-module.exports = router
+module.exports = router;
