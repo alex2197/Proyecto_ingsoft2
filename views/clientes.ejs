@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
     <title>SPA</title>
 </head>
 <body>
     <h1> HOLA DESDE CLIENTES EJS</h1>
     <!--Menu-->
-	<ul>
-		<li><a href="/CatalogoCitas" title="catalogoCitas">Catalogo</a></li>
-        <li><a href="/clientes/citasDelCliente" title="citasUsuario">Citas</a></li>
-        <li><a href="/clientes" title="clientes">Clientes</a></li>
-        <li><a href="/" title="index">Menu</a></li>
-        <li><a href="/contacto" title="contacto">Contacto</a></li>
-	</ul>
-
+	<!--Menu-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Menu</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/CatalogoCitas">Catalogo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contacto"> Contacto </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 </body>
 </html>
