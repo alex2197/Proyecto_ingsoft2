@@ -7,6 +7,7 @@ const port = 3000
 
 const routerClientes = require('./routes/clientes')
 const routerCatalogoCitas = require('./routes/CatalogoCitas')
+const routerContacto = require('./routes/Contacto')
 
 app.set('view engine', 'ejs')
 
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
 
 app.use('/clientes', routerClientes)
 app.use('/CatalogoCitas', routerCatalogoCitas)
+app.use('/Contacto', routerContacto)
 
 
 app.listen(port, () => {
