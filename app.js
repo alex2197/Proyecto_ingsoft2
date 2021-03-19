@@ -1,9 +1,9 @@
-//const { Sequelize } = require('sequelize')
+const sequelize = require('./database/db');
 const express = require('express')
+const User = require('./database/models/Clientes');
 const app = express()
 const port = 3000
 
-//const sequelize = new Sequelize('sqlite::memory')
 
 const routerClientes = require('./routes/clientes')
 const routerCatalogoCitas = require('./routes/CatalogoCitas')
@@ -24,6 +24,13 @@ app.use('/Contacto', routerContacto)
 
 app.listen(port, () => {
     console.log(`Example app at http://localhost:${port}`)
+
+    //Conectarse a la base de datos
+    sequelize.sync({ force: false }).then(() => {
+        console.log("Nos hemos podido conectar a la base de datos");
+    }).catch(error => {
+        console.log("Se ha producido un error", error);
+    })
 })
 
 
