@@ -5,30 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="/views/styles/Index-style.css">
     <title>SPA</title>
 </head>
 <body>
-    <h1> SPA </h1>
-    <!--Menu-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">Menu</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/CatalogoCitas">Catalogo</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contacto"> Contacto </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-        
+  <nav>
+      <h3>SPA</h3>
+      <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="#">Servicios <i class="icon ion-md-arrow-dropdown"></i></a>
+              <ul>
+                  <li><a href="/CatalogoCitas">Catalogo</a></li>
+              </ul>
+          </li>
+          <li><a href="/contacto">Contacto</a></li>
+      </ul>
+  </nav>
+
 </body>
 </html>
