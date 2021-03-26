@@ -1,6 +1,7 @@
 const sequelize = require('./database/db');
 const express = require('express')
 const User = require('./database/models/Clientes');
+var bodyParser = require('body-parser')
 const app = express()
 const port = 3000
 
@@ -9,6 +10,8 @@ const routerClientes = require('./routes/clientes')
 const routerCatalogoCitas = require('./routes/CatalogoCitas')
 const routerContacto = require('./routes/Contacto')
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.set('view engine', 'ejs')
 app.use("/views/styles", express.static(__dirname + "/views/styles"));
