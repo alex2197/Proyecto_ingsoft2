@@ -10,14 +10,18 @@
     <div class="title-container">
         <h1> FORMA FRESONA </h1>
     </div>
-    <form action="/clientes/ValidarUsuario" method="POST">
+    <form action="/clientes/RegistroUsuarios" method="POST">
         <div class="username-container">
             <label for="username">Username: </label>
             <input type="username" name="username" id="username">
         </div>
         <div class="password-container">
-            <label for="password">password: </label>
+            <label for="password">Password: </label>
             <input type="password" name="password" id="password">
+        </div>
+        <div class="email-container">
+            <label for="email">email: </label>
+            <input type="email" name="email" id="email">
         </div>
         <input type="submit" value="Submit">
     </form>

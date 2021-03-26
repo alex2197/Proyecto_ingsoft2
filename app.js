@@ -13,6 +13,7 @@ const routerContacto = require('./routes/Contacto')
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+
 app.set('view engine', 'ejs')
 app.use("/views/styles", express.static(__dirname + "/views/styles"));
 

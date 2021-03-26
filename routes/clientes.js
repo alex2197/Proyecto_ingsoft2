@@ -2,12 +2,30 @@ const express = require('express')
 const User = require('../database/models/Clientes')
 const router = express.Router();
 
-
-router.get('/', (req, res) => {
+router.get('/Login', (req, res) => {
     res.render('Login');
 })
 
-router.post('/', async (req, res) => {
+router.get('/Registro', (req, res) => {
+    res.render('Registro');
+})
+
+router.post('/RegistrUsuarios', async (req, res) => {
+ 
+   var username = req.body.username;
+   var password = req.body.password;
+   var email = req.body.email;
+
+   User.create({ 
+
+        username: username,
+        password: password,
+        email: email  
+    });
+
+})
+
+router.post('/ValidarUsuario', async (req, res) => {
     User.findAll({
         where: {
           username: req.body.username,
@@ -21,10 +39,5 @@ router.post('/', async (req, res) => {
 router.get('/citasDelCliente', (req, res) => {
     res.render('citasDelUsuario')
 })
-
-
-
-
-
 
 module.exports = router;
