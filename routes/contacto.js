@@ -7,12 +7,12 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    User.create({
+    /*User.create({
         firstName:"Aaron",
         lastName:"Valadez"
     }).then(user => {
         res.json(user);
-    })
+    })*/
 })
 
 module.exports = router;
