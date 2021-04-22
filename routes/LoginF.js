@@ -6,7 +6,23 @@ router.get('/', (req, res) => {
     res.render('LoginFinal')
 })
 
-router.post('/ValidarUsuario', async (req, res) => {
+router.post('/RegistroUsuarios', async (req, res) => {
+ 
+    var username = req.body.username;
+    var password = req.body.password;
+    var email = req.body.email;
+ 
+    User.create({ 
+         username: username,
+         password: password,
+         email: email  
+     }).then(user => {
+         res.send("Se creo usuario existosamente");
+     })
+ 
+ })
+
+ router.post('/ValidarUsuario', async (req, res) => {
     
     var password = req.body.password;
     var email = req.body.email;
@@ -17,30 +33,8 @@ router.post('/ValidarUsuario', async (req, res) => {
           password: password
         }
       }).then(user => {
-        if(email == req.body.email && password == req.body.password){
-            res.json("Gracias por loggearte, empieza a navegar")
-        }  
-        else{
-            res.json("Intenta de nuevo por favor")
-        }
         res.json(user);
-    });
-
-    
+    });  
 })
-router.post('/RegistroUsuarios', async (req, res) => {
- 
-    var username = req.body.username;
-    var password = req.body.password;
-    var email = req.body.email;
- 
-    User.create({ 
- 
-         username: username,
-         password: password,
-         email: email  
-     });
- 
- })
 
 module.exports = router
