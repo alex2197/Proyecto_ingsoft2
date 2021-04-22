@@ -10,7 +10,7 @@ router.get('/Registro', (req, res) => {
     res.render('Registro');
 })
 
-router.post('/RegistrUsuarios', async (req, res) => {
+router.post('/RegistroUsuarios', async (req, res) => {
  
    var username = req.body.username;
    var password = req.body.password;
