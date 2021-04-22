@@ -9,6 +9,7 @@ const port = 3000
 const routerClientes = require('./routes/clientes')
 const routerCatalogoCitas = require('./routes/CatalogoCitas')
 const routerContacto = require('./routes/Contacto')
+const routerLoginF = require('./routes/LoginF')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
 app.use('/clientes', routerClientes)
 app.use('/CatalogoCitas', routerCatalogoCitas)
 app.use('/Contacto', routerContacto)
+app.use('/LoginF', routerLoginF)
 
 
 app.listen(port, () => {
